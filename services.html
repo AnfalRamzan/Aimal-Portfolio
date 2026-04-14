@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Services</title>
+
+<link rel="stylesheet" href="css/style.css?v=3">
+
+<style>
+
+.img-box{
+position:relative;
+cursor:pointer;
+}
+
+/* default */
+.plus{
+position:absolute;
+top:10px;
+right:10px;
+background:rgba(255,255,255,0.9);
+color:#9ca3af;
+width:32px;
+height:32px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+}
+
+/* hover */
+.card:hover .plus{
+color:#22c55e;
+}
+
+/* CLICK FULL GREEN */
+.card:active .plus{
+background:#22c55e;
+color:white;
+transform:scale(1.1);
+}
+
+/* LIGHTBOX */
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+width:80%;
+max-width:900px;
+border-radius:10px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+<div class="profile">
+<img src="images/profile.png" alt="Profile">
+<h2>Aimal Ramzan</h2>
+</div>
+
+<nav class="menu">
+
+<a href="index.html">
+<img src="images/home.png"> Home
+</a>
+
+<a href="about.html">
+<img src="images/about.png"> About
+</a>
+
+<a href="resume.html">
+<img src="images/resume.png"> Resume
+</a>
+
+<a href="projects.html">
+<img src="images/projects.png"> Projects
+</a>
+
+<a href="services.html">
+<img src="images/services.png"> Services
+</a>
+
+<a href="contact.html">
+<img src="images/contact.png"> Contact
+</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+<section id="services" class="about-page">
+
+<div class="about-box">
+
+<div class="header-box">
+<h1>SEO Services</h1>
+
+<p>
+I provide complete SEO solutions including on-page SEO, off-page SEO, technical SEO, and advanced backlink strategies.
+My focus is to improve Google rankings using high-quality backlinks, content optimization, and technical improvements.
+</p>
+</div>
+
+<div class="projects">
+
+<div class="card" onclick="openImage('images/profile-backlinks.png')">
+<div class="img-box">
+<img src="images/profile-backlinks.png">
+<span class="plus">+</span>
+</div>
+<h3>Profile Backlinks</h3>
+</div>
+
+<div class="card" onclick="openImage('images/Article backlinks.png')">
+<div class="img-box">
+<img src="images/Article backlinks.png">
+<span class="plus">+</span>
+</div>
+<h3>Article Submission</h3>
+</div>
+
+<div class="card" onclick="openImage('images/web 2.0.png')">
+<div class="img-box">
+<img src="images/web 2.0.png">
+<span class="plus">+</span>
+</div>
+<h3>Web 2.0 Creation</h3>
+</div>
+
+<div class="card" onclick="openImage('images/Directory submission.png')">
+<div class="img-box">
+<img src="images/Directory submission.png">
+<span class="plus">+</span>
+</div>
+<h3>Directory Submission</h3>
+</div>
+
+<div class="card" onclick="openImage('images/Guest posting.png')">
+<div class="img-box">
+<img src="images/Guest posting.png">
+<span class="plus">+</span>
+</div>
+<h3>Guest Posting</h3>
+</div>
+
+<div class="card" onclick="openImage('images/Image submission.png')">
+<div class="img-box">
+<img src="images/Image submission.png">
+<span class="plus">+</span>
+</div>
+<h3>Image Submission</h3>
+</div>
+
+<div class="card" onclick="openImage('images/Mix Backlinks.png')">
+<div class="img-box">
+<img src="images/Mix Backlinks.png">
+<span class="plus">+</span>
+</div>
+<h3>Mix Backlinks</h3>
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+<span class="close">&times;</span>
+<img id="lightbox-img">
+</div>
+
+<script>
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>

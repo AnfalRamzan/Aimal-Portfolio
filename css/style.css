@@ -807,3 +807,68 @@ html, body {
         font-size: 14px;
     }
 }
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
+
+.container{
+flex-direction: column;
+}
+
+/* sidebar top pe */
+.sidebar{
+width:100%;
+position:relative;
+height:auto;
+}
+
+/* profile center */
+.profile{
+text-align:center;
+}
+
+/* menu horizontal */
+.menu{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:10px;
+}
+
+.menu a{
+flex:0 0 auto;
+}
+
+/* hero fix */
+.hero-box{
+text-align:center;
+padding:40px 20px;
+}
+
+.name{
+font-size:28px;
+}
+
+/* about box padding */
+.about-box{
+padding:20px;
+}
+
+/* cards grid */
+.projects{
+grid-template-columns:1fr;
+}
+
+/* contact layout */
+.contact-wrapper{
+flex-direction:column;
+}
+
+.contact-left,
+.contact-right{
+width:100%;
+}
+
+}img{
+max-width:100%;
+height:auto;
+}

@@ -872,3 +872,56 @@ width:100%;
 max-width:100%;
 height:auto;
 }
+.contact-wrapper{
+display:flex;
+gap:30px;
+}
+
+.contact-left,
+.contact-right{
+flex:1;
+}
+
+/* FORM FIX */
+.contact-right form{
+width:100%;
+box-sizing:border-box;
+}
+
+.contact-right input,
+.contact-right textarea{
+width:100%;
+max-width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:8px;
+border:1px solid #ddd;
+box-sizing:border-box;
+}
+
+/* BUTTON FIX */
+.contact-right button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#22c55e;
+color:white;
+cursor:pointer;
+}
+
+/* MOBILE FIX */
+@media (max-width:768px){
+.contact-wrapper{
+flex-direction:column;
+}
+
+.contact-right,
+.contact-left{
+width:100%;
+}
+
+.contact-right form{
+padding:0;
+}
+}

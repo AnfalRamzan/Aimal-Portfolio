@@ -96,7 +96,7 @@ html, body {
     box-sizing: border-box;
 
     position: relative;
-    background-image: url("../images/profile.png");
+    background-image: url("../images/Profile.png");
     background-size: cover;
     background-position: center;
     color: white;
@@ -600,4 +600,210 @@ html, body {
 .contact-right input:focus::placeholder,
 .contact-right textarea:focus::placeholder {
     opacity: 0.5;
+}
+
+/* =========================
+   RESPONSIVE DESIGN FOR ALL DEVICES
+========================= */
+
+/* SMALL LAPTOPS (1024px and below) */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .about-page,
+    .hero {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+        padding: 50px 30px;
+    }
+
+    .about-box {
+        padding: 35px;
+        max-width: 100%;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
+    .typing {
+        font-size: 22px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* TABLET (768px and below) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .about-page,
+    .hero {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 40px 20px;
+    }
+
+    .about-box {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        min-width: 100%;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .typing {
+        font-size: 20px;
+    }
+}
+
+/* MOBILE (600px and below) */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+        z-index: 10000;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .menu a {
+        flex: 1;
+        min-width: 80px;
+        padding: 8px 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .about-page,
+    .hero {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .about-box {
+        max-width: 100%;
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .about-box h1 {
+        font-size: 28px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .typing {
+        font-size: 18px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        border-radius: 12px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .info-card {
+        padding: 12px;
+    }
+
+    .contact-right button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-float img {
+        width: 25px;
+    }
+}
+
+/* SMALL MOBILE (480px and below) */
+@media (max-width: 480px) {
+    .about-box h1 {
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .typing {
+        font-size: 16px;
+    }
+
+    .about-box {
+        padding: 15px 10px;
+    }
+
+    .info-card {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-card {
+        padding: 10px;
+    }
+
+    .contact-card h3 {
+        font-size: 14px;
+    }
 }

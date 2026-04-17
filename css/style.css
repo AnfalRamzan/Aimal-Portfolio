@@ -935,3 +935,19 @@ padding:0;
 .hero-box .typing{
     font-weight: 600;
 }
+.tab-btn {
+    padding: 10px 18px;
+    border: none;
+    background: #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+
+    /* important for clean alignment */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+}

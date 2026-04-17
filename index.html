@@ -602,129 +602,127 @@ My focus is to improve Google rankings using high-quality backlinks, content opt
 
 </section>
 
-    <!-- CONTACT PAGE CONTENT -->
-    <section id="contact" class="about-page">
+   <!-- CONTACT PAGE CONTENT -->
+<!-- CONTACT PAGE CONTENT -->
+<section id="contact" class="about-page">
 
-        <div class="about-box contact-wrapper">
+    <div class="about-box contact-wrapper">
 
-            <!-- LEFT SIDE -->
-            <div class="contact-left">
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
 
-                <h1>Contact Me</h1>
+            <h1>Contact Me</h1>
 
-                <p class="intro">
-                    Feel free to contact me. 
-                    I am always available for SEO projects, freelancing work, and collaborations.
-                </p>
+            <p class="intro">
+                Feel free to contact me. 
+                I am always available for SEO projects, freelancing work, and collaborations.
+            </p>
 
-                <!-- ADDRESS -->
-                <div class="contact-card">
-                    <img src="images/location.png" alt="Address">
-                    <h3>Address</h3>
-                    <p>Islamabad, Pakistan</p>
-                </div>
-
-                <!-- CALL -->
-               
-
-                <!-- EMAIL -->
-                <div class="contact-card">
-                    <img src="images/email.png" alt="Email">
-                    <h3>Email</h3>
-                    <p>
-                        <a href="mailto:aimalramzan6@gmail.com">
-                            aimalramzan6@gmail.com
-                        </a>
-                    </p>
-                </div>
-
-                <!-- LINKEDIN -->
-                <div class="contact-card">
-                    <img src="images/linkedin.png" alt="LinkedIn">
-                    <h3>LinkedIn</h3>
-                    <p>
-                        <a href="https://www.linkedin.com/in/aimal-ramzan-894a32304" target="_blank">
-                            Open Profile
-                        </a>
-                    </p>
-                </div>
-
-                <!-- FIVERR -->
-                <div class="contact-card">
-                    <img src="images/fiverr.png" alt="Fiverr">
-                    <h3>Fiverr</h3>
-                    <p>
-                        <a href="https://www.fiverr.com/s/pdbzAV8" target="_blank">
-                            Open Profile
-                        </a>
-                    </p>
-                </div>
-
+            <!-- ADDRESS -->
+            <div class="contact-card">
+                <img src="images/location.png" alt="Address">
+                <h3>Address</h3>
+                <p>Islamabad, Pakistan</p>
             </div>
 
-            <!-- RIGHT FORM -->
-            <div class="contact-right">
+            <!-- EMAIL -->
+            <div class="contact-card">
+                <img src="images/email.png" alt="Email">
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:aimalramzan6@gmail.com">
+                        aimalramzan6@gmail.com
+                    </a>
+                </p>
+            </div>
 
-                <h2>Send Message</h2>
+            <!-- LINKEDIN -->
+            <div class="contact-card">
+                <img src="images/linkedin.png" alt="LinkedIn">
+                <h3>LinkedIn</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/aimal-ramzan-894a32304" target="_blank">
+                        Open Profile
+                    </a>
+                </p>
+            </div>
 
-                <form>
-
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject" required>
-
-                    <textarea rows="6" placeholder="Your Message"></textarea>
-
-                    <button type="submit">Send Message</button>
-
-                </form>
-
+            <!-- FIVERR -->
+            <div class="contact-card">
+                <img src="images/fiverr.png" alt="Fiverr">
+                <h3>Fiverr</h3>
+                <p>
+                    <a href="https://www.fiverr.com/s/pdbzAV8" target="_blank">
+                        Open Profile
+                    </a>
+                </p>
             </div>
 
         </div>
 
-    </section>
+        <!-- RIGHT FORM -->
+        <div class="contact-right">
 
-</div>
+            <h2>Send Message</h2>
 
-<div class="lightbox" id="lightbox" onclick="closeImage()">
-<span class="close">&times;</span>
-<img id="lightbox-img">
-</div>
+            <form id="contact-form">
 
+                <input type="text" name="from_name" placeholder="Your Name" required>
+                <input type="email" name="from_email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
 
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 
-<script src="js/script.js"></script>
+                <button type="submit">Send Message</button>
 
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EMAILJS SDK (NEW VERSION) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- EMAIL SCRIPT -->
 <script>
-function show(category, event) {
+document.addEventListener("DOMContentLoaded", function () {
 
-let cards = document.querySelectorAll(".card");
-let buttons = document.querySelectorAll(".tab-btn");
+    emailjs.init("2kZvvuM8trBJvWn-9");
 
-buttons.forEach(btn => btn.classList.remove("active"));
-event.target.classList.add("active");
+    const form = document.getElementById("contact-form");
+    const button = form.querySelector("button");
 
-cards.forEach(card => {
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
 
-if(category === "all"){
-card.style.display = "block";
-}else{
-card.style.display = card.classList.contains(category) ? "block" : "none";
-}
+        button.disabled = true;
+        button.innerText = "Sending...";
+
+        emailjs.send("service_fajn8e7", "template_knyih9r", {
+            from_name: form.from_name.value,
+            from_email: form.from_email.value,
+            subject: form.subject.value,
+            message: form.message.value
+        })
+        .then(() => {
+            alert("✅ Message sent successfully!");
+            form.reset();
+        })
+        .catch((error) => {
+            console.log(error);
+            alert("❌ Message failed!");
+        })
+        .finally(() => {
+            button.disabled = false;
+            button.innerText = "Send Message";
+        });
+
+    });
 
 });
-}
-
-// LIGHTBOX
-function openImage(src){
-document.getElementById("lightbox").style.display = "flex";
-document.getElementById("lightbox-img").src = src;
-}
-
-function closeImage(){
-document.getElementById("lightbox").style.display = "none";
-}
 </script>
 </body>
 </html>

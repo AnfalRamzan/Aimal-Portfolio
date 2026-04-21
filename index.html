@@ -3,726 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Portfolio</title>
-
-    <!-- CACHE BUSTER (GOOD PRACTICE) -->
-    <link rel="stylesheet" href="css/style.css?v=3">
-
+    <title>Aimal Ramzan | SEO Expert</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css?v=9">
     <style>
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* hover highlight */
-.info-card{
-transition:0.3s;
-cursor:pointer;
-}
-
-.info-card:hover{
-border-color:#22c55e;
-color:#22c55e;
-transform:translateY(-3px);
-}
-
-/* ONLY UPDATED PART */
-.contact-card a{
-color:#9ca3af;
-text-decoration:none;
-transition:0.3s;
-font-weight:500;
-}
-
-.contact-card a:hover{
-color:#22c55e;
-}
-
-.contact-card a:active{
-color:#22c55e;
-}
-
-/* HEADER */
-.header-box h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.header-box p {
-    color: #475569;
-    line-height: 1.7;
-}
-
-/* TABS */
-.tabs {
-    margin: 20px 0;
-}
-
-.tab-btn {
-    padding: 10px 18px;
-    border: none;
-    background: #e2e8f0;
-    margin-right: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: 600;
-}
-
-.tab-btn.active,
-.tab-btn:hover {
-    background: #22c55e;
-    color: white;
-}
-
-/* PROJECT GRID */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    cursor: pointer;
-    position: relative;
-}
-
-/* IMAGE */
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-/* TITLE */
-.card h3 {
-    padding: 12px;
-    font-size: 16px;
-}
-
-/* HOVER EFFECT */
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* + ICON */
-.card::after {
-    content: "+";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #f1f5f9;
-    color: #9ca3af;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-/* hover */
-.card:hover::after{
-    color:#22c55e;
-}
-
-/* click full green */
-.card:active::after{
-    background:#22c55e;
-    color:white;
-    transform:scale(1.1);
-}
-
-/* LIGHTBOX */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.lightbox img {
-    width: 80%;
-    max-width: 900px;
-    border-radius: 10px;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-/* HEADER CONTACT TEXT (NOT CLICKABLE) */
-.resume-contact{
-color:#64748b;
-line-height:1.7;
-margin-top:10px;
-}
-
-/* GREEN HIGHLIGHT TITLE */
-.highlight{
-margin-top:15px;
-background:#22c55e;
-color:white;
-padding:10px 18px;
-border-radius:8px;
-display:inline-block;
-font-weight:700;
-letter-spacing:0.5px;
-}
-
-/* clickable project cards */
-.project-link{
-text-decoration:none;
-color:inherit;
-display:block;
-}
-
-.project-link:hover .info-card{
-border-color:#22c55e;
-color:#22c55e;
-cursor:pointer;
-}
-
-.img-box{
-position:relative;
-cursor:pointer;
-}
-
-/* default */
-.plus{
-position:absolute;
-top:10px;
-right:10px;
-background:rgba(255,255,255,0.9);
-color:#9ca3af;
-width:32px;
-height:32px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-font-weight:bold;
-transition:0.3s;
-}
-
-/* hover */
-.card:hover .plus{
-color:#22c55e;
-}
-
-/* CLICK FULL GREEN */
-.card:active .plus{
-background:#22c55e;
-color:white;
-transform:scale(1.1);
-}
+        /* FORCE hero background - this overrides external CSS */
+        .hero-section {
+            background-image: url('images/Profilee.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            position: relative !important;
+            min-height: 100vh !important;
+        }
+        .hero-section::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: rgba(0,0,0,0.6) !important;
+            z-index: 1 !important;
+        }
+        .hero-section .about-box {
+            position: absolute !important;
+            bottom: 50px !important;
+            left: 60px !important;
+            z-index: 2 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            text-align: left !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: auto !important;
+            max-width: 600px !important;
+        }
+        .hero-section .name {
+            color: white !important;
+            font-size: 55px !important;
+            margin-bottom: 10px !important;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6) !important;
+        }
+        .hero-section .typing {
+            color: #22c55e !important;
+            font-weight: 600 !important;
+            font-size: 28px !important;
+            min-height: 60px !important;
+        }
+        .profile img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid #22c55e;
+            object-fit: cover;
+        }
+        .tab-btn, .card {
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .hero-section .about-box {
+                left: 20px !important;
+                bottom: 30px !important;
+            }
+            .hero-section .name {
+                font-size: 36px !important;
+            }
+            .hero-section .typing {
+                font-size: 22px !important;
+            }
+        }
     </style>
 </head>
-
 <body>
 
 <div class="container">
-
-    <!-- SIDEBAR -->
     <aside class="sidebar">
-
         <div class="profile">
-            <img src="images/Profile.png" alt="Profile">
+            <img src="images/Profilee.png" alt="Aimal Ramzan profile picture">
             <h2>Aimal Ramzan</h2>
         </div>
-
-        <!-- MENU -->
         <nav class="menu">
-
-            <a href="#home">
-                <img src="images/home.png" alt="Home"> Home
-            </a>
-
-            <a href="#about">
-                <img src="images/about.png" alt="About"> About
-            </a>
-
-            <a href="#resume">
-                <img src="images/resume.png" alt="Resume"> Resume
-            </a>
-
-            <a href="#projects">
-                <img src="images/projects.png" alt="Projects"> Projects
-            </a>
-
-            <a href="#services">
-                <img src="images/services.png" alt="Services"> Services
-            </a>
-
-            <a href="#contact">
-                <img src="images/contact.png" alt="Contact"> Contact
-            </a>
-
+            <a href="#home"><img src="images/home.png" alt=""> Home</a>
+            <a href="#about"><img src="images/about.png" alt=""> About</a>
+            <a href="#resume"><img src="images/resume.png" alt=""> Resume</a>
+            <a href="#projects"><img src="images/projects.png" alt=""> Projects</a>
+            <a href="#services"><img src="images/services.png" alt=""> Services</a>
+            <a href="#contact"><img src="images/contact.png" alt=""> Contact</a>
         </nav>
-
     </aside>
 
-    <!-- HERO -->
-   <section id="home" class="about-page" style="background-image: url('images/Profile.png'); background-size: cover; background-position: center;">
-
-        <div class="about-box" style="background: transparent; box-shadow: none;">
-
-            <div class="hero-box">
-
-                <h1 class="name">Aimal Ramzan</h1>
-
-                <h2 class="typing"></h2>
-
-            </div>
-
+    <!-- HERO SECTION -->
+    <section id="home" class="about-page hero-section">
+        <div class="about-box">
+            <h1 class="name">Aimal Ramzan</h1>
+            <h2 class="typing" id="heroTyping"></h2>
         </div>
-
     </section>
 
-    <!-- ABOUT PAGE CONTENT -->
+    <!-- ========== REST OF YOUR CONTENT (unchanged) ========== -->
     <section id="about" class="about-page">
+        <div class="about-box">
+            <h1>About Me</h1>
+            <p>I am a passionate <b>SEO Specialist</b> and Content Writer with a background in Medical Imaging Technology (MIT). My academic knowledge has strengthened my research and analytical skills, allowing me to create accurate, well-optimized content.</p>
+            <p>I help websites improve search engine rankings and drive organic traffic through effective SEO strategies.</p>
+            <p>I implement keyword research, content optimization, and basic technical SEO to improve website visibility and performance.</p>
+            <p style="color:#22c55e; font-weight:600; font-size:18px;">🚀 Available as a freelancer since 2021</p>
+            <div class="info-grid">
+                <div class="info-card">📍 City: Islamabad</div>
+                <div class="info-card">🎯 SEO Expert (5 Year+ Experience)</div>
+                <div class="info-card">📧 aimalramzan6@gmail.com</div>
+                <div class="info-card">✍ Content Writer</div>
+                <div class="info-card">🚀 Successful Projects 60+</div>
+                <div class="info-card">🤝 Satisfied Clients 50+</div>
+            </div>
+        </div>
+    </section>
 
-<div class="about-box">
-
-<h1>About Me</h1>
-
-<p>
-I am a passionate <b>SEO Specialist</b> and Content Writer with a background in Medical Imaging Technology (MIT).
-My academic knowledge has strengthened my research and analytical skills, allowing me to create accurate, well-optimized content.
-</p>
-
-<p>
-I help websites improve search engine rankings and drive organic traffic through effective SEO strategies.
-</p>
-
-<p>
-I implement keyword research, content optimization, and basic technical SEO to improve website visibility and performance.
-</p>
-
-<p style="color:#22c55e; font-weight:600; font-size:18px;">
-🚀 Available as a freelancer since 2021
-</p>
-
-<div class="info-grid">
-
-<div class="info-card">📍 City: Islamabad</div>
-<div class="info-card">🎯 SEO Expert (5 Year+ Experience)</div>
-<div class="info-card">📧 aimalramzan6@gmail.com</div>
-<div class="info-card">✍ Content Writer</div>
-
-<!-- NEW ADDED -->
-<div class="info-card">🚀 Successful Projects 60+</div>
-<div class="info-card">🤝 Satisfied Clients 50+</div>
-
-</div>
-
-</div>
-
-</section>
-
-    <!-- RESUME PAGE CONTENT -->
     <section id="resume" class="about-page">
+        <div class="about-box resume-box">
+            <div class="resume-header">
+                <h1>Aimal Ramzan</h1>
+                <p class="resume-contact">📍 Islamabad, Pakistan | 📧 aimalramzan6@gmail.com | 📞 0315 7461790 <br> 🔗 LinkedIn: linkedin.com/in/aimal-ramzan-894a32304</p>
+                <div class="highlight">MEDICAL IMAGING TECHNOLOGIST & DIGITAL MARKETING EXPERT</div>
+            </div>
+            <section class="resume-section">
+                <h2>Summary</h2>
+                <p>Dedicated Medical Imaging Technology (MIT) student with hands-on clinical exposure... Additionally, I am a Digital Marketing Expert with experience in SEO, Meta Ads, social media marketing, and content writing.</p>
+            </section>
+            <section class="resume-section">
+                <h2>Work Experience</h2>
+                <div class="info-card">Radiology Observer | Shifa International Hospital (June 2025 – Sept 2025)</div>
+                <div class="info-card">Clinical Exposure | IIMCT Pakistan Railway Hospital (Jan 2025 – Sept 2025)</div>
+                <div class="info-card">Hospital Rotation | Riphah International Hospital (Sep 2025 – Present)</div>
+                <div class="info-card">Freelance SEO Specialist | 2021 – Present</div>
+                <div class="info-card">Virtual Lab Incharge | Bano Qabil Sahiwal (2025)</div>
+            </section>
+            <section class="resume-section">
+                <h2>Successful Projects</h2>
+                <div class="info-grid">
+                    <a class="project-link" href="https://realcleaningfujairah.ae/" target="_blank" rel="noopener noreferrer"><div class="info-card">Real Cleaning Fujairah</div></a>
+                    <a class="project-link" href="http://hanjra.com.pk/" target="_blank" rel="noopener noreferrer"><div class="info-card">Hanjra</div></a>
+                    <a class="project-link" href="https://dubaipaintingservices.org/" target="_blank" rel="noopener noreferrer"><div class="info-card">Dubai Painting Services</div></a>
+                    <a class="project-link" href="https://shoptrendy.pk/" target="_blank" rel="noopener noreferrer"><div class="info-card">Shop Trendy</div></a>
+                    <a class="project-link" href="https://globalnewspk.com/" target="_blank" rel="noopener noreferrer"><div class="info-card">Global News PK</div></a>
+                    <a class="project-link" href="https://pakistansolartraders.com/" target="_blank" rel="noopener noreferrer"><div class="info-card">Pakistan Solar Traders</div></a>
+                    <a class="project-link" href="https://k2spiceshop.com/" target="_blank" rel="noopener noreferrer"><div class="info-card">K2 Spice Shop</div></a>
+                    <a class="project-link" href="https://buyresearchchemicalsusa.com/" target="_blank" rel="noopener noreferrer"><div class="info-card">Buy Research Chemicals USA</div></a>
+                </div>
+            </section>
+            <section class="resume-section">
+                <h2>Education</h2>
+                <div class="info-card">BS Medical Imaging Technology – Riphah International University (2023–2026)</div>
+                <div class="info-card">FSc Pre-Medical – Punjab College Renala khurd (2021–2023)</div>
+                <div class="info-card">Matric Science – DPS Renala Khurd (2019–2021)</div>
+            </section>
+            <section class="resume-section">
+                <h2>Certifications</h2>
+                <div class="info-card">SEO Expert – I Lab Solution Sahiwal (2024)</div>
+                <div class="info-card">Lab Incharge – Bano Qabil Sahiwal (2025)</div>
+                <div class="info-card">Head of Speech – MIT Dept, Riphah University</div>
+            </section>
+        </div>
+    </section>
 
-<div class="about-box resume-box">
-
-<!-- HEADER -->
-<div class="resume-header">
-<h1>Aimal Ramzan</h1>
-
-<p class="resume-contact">
-📍 Islamabad, Pakistan |
-📧 aimalramzan6@gmail.com |
-📞 0315 7461790 <br>
-🔗 LinkedIn: linkedin.com/in/aimal-ramzan-894a32304
-</p>
-
-<div class="highlight">
-MEDICAL IMAGING TECHNOLOGIST & DIGITAL MARKETING EXPERT
-</div>
-</div>
-
-<section class="resume-section">
-<h2>Summary</h2>
-<p>
-Dedicated Medical Imaging Technology (MIT) student with hands-on clinical exposure in X-ray procedures and ultrasound observation.
-Skilled in radiation safety, patient positioning, and quality imaging techniques.
-</p>
-
-<p>
-Additionally, I am a Digital Marketing Expert with experience in SEO, Meta Ads, social media marketing, and content writing.
-I have worked on improving website visibility and managing online campaigns for digital growth.
-</p>
-</section>
-
-<section class="resume-section">
-<h2>Work Experience</h2>
-
-<div class="info-card">Radiology Observer | Shifa International Hospital (June 2025 – Sept 2025)</div>
-<div class="info-card">Clinical Exposure | IIMCT Pakistan Railway Hospital (Jan 2025 – Sept 2025)</div>
-<div class="info-card">Hospital Rotation | Riphah International Hospital (Sep 2025 – Present)</div>
-<div class="info-card">Freelance SEO Specialist | 2021 – Present</div>
-<div class="info-card"> Virtual Lab Incharge | Bano Qabil Sahiwal (2025)</div>
-
-</section>
-
-<section class="resume-section">
-<h2>Projects</h2>
-<p>
-Successfully managed and ranked 50+ SEO projects across different industries.
-Worked with clients from Dubai, Saudi Arabia, UK, USA.
-</p>
-</section>
-
-<section class="resume-section">
-<h2>Successful Projects</h2>
-
-<div class="info-grid">
-
-<a class="project-link" href="https://realcleaningfujairah.ae/" target="_blank">
-<div class="info-card">Real Cleaning Fujairah</div>
-</a>
-
-<a class="project-link" href="http://hanjra.com.pk/" target="_blank">
-<div class="info-card">Hanjra</div>
-</a>
-
-<a class="project-link" href="https://dubaipaintingservices.org/" target="_blank">
-<div class="info-card">Dubai Painting Services</div>
-</a>
-
-<a class="project-link" href="https://shoptrendy.pk/" target="_blank">
-<div class="info-card">Shop Trendy</div>
-</a>
-
-<a class="project-link" href="https://globalnewspk.com/" target="_blank">
-<div class="info-card">Global News PK</div>
-</a>
-
-<a class="project-link" href="https://pakistansolartraders.com/" target="_blank">
-<div class="info-card">Pakistan Solar Traders</div>
-</a>
-
-<a class="project-link" href="https://k2spiceshop.com/" target="_blank">
-<div class="info-card">K2 Spice Shop</div>
-</a>
-
-<a class="project-link" href="https://buyresearchchemicalsusa.com/" target="_blank">
-<div class="info-card">Buy Research Chemicals USA</div>
-</a>
-
-</div>
-</section>
-
-<section class="resume-section">
-<h2>Education</h2>
-
-<div class="info-card">
-BS Medical Imaging Technology – Riphah International University (2023–2026)
-</div>
-
-<div class="info-card">
-FSc Pre-Medical – Punjab College Renala khurd2021–2023)
-</div>
-
-<div class="info-card">
-Matric Science – DPS Renala Khurd (2019–2021)
-</div>
-
-</section>
-
-<section class="resume-section">
-<h2>Certifications</h2>
-
-<div class="info-card">SEO Expert – I Lab Solution Sahiwal (2024)</div>
-<div class="info-card">Lab Incharge – Bano Qabil Sahiwal (2025)</div>
-<div class="info-card">Head of Speech – MIT Dept, Riphah University</div>
-
-</section>
-
-</div>
-
-</section>
-
-    <!-- PROJECTS PAGE CONTENT -->
     <section id="projects" class="about-page">
-
-<div class="about-box">
-
-<div class="header-box">
-<h1>My Projects</h1>
-<p>
-Here are my selected projects in digital marketing, SEO websites, e-commerce websites, client websites, and performance optimization.
-I focus on improving Google rankings through on-page SEO, technical SEO, fast loading speed, mobile responsiveness, and clean UI/UX design for better user experience and business growth.
-</p>
+        <div class="about-box">
+            <div class="header-box">
+                <h1>My Projects</h1>
+                <p>Here are my selected projects...</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" data-cat="all">All</button>
+                <button class="tab-btn" data-cat="international">International</button>
+                <button class="tab-btn" data-cat="ecom">E-Commerce</button>
+                <button class="tab-btn" data-cat="gaming">Gaming</button>
+                <button class="tab-btn" data-cat="performance">Performance</button>
+            </div>
+            <div class="projects" id="projectsContainer">
+                <div class="card international" data-img="images/interclient.png">
+    <img src="images/interclient.png" alt="International website">
+    <h3>International Website</h3>
 </div>
-
-<div class="tabs">
-<button class="tab-btn active" onclick="show('all', event)">All</button>
-<button class="tab-btn" onclick="show('international', event)">International</button>
-<button class="tab-btn" onclick="show('ecom', event)">E-Commerce</button>
-<button class="tab-btn" onclick="show('gaming', event)">Gaming</button>
-<button class="tab-btn" onclick="show('performance', event)">Performance</button>
+<div class="card international" data-img="images/interclint2.png">
+    <img src="images/interclint2.png" alt="International website">
+    <h3>International Website</h3>
 </div>
+                <div class="card ecom" data-img="images/Ecom1.png"><img src="images/Ecom1.png" alt="E-commerce website screenshot"><h3>E-Commerce Website</h3></div>
+                <div class="card ecom" data-img="images/Ecom2.png"><img src="images/Ecom2.png" alt="E-commerce website screenshot"><h3>E-Commerce Website</h3></div>
+                <div class="card gaming" data-img="images/gaming1.png"><img src="images/gaming1.png" alt="Gaming website screenshot"><h3>Gaming Website</h3></div>
+                <div class="card gaming" data-img="images/gaming2.png"><img src="images/gaming2.png" alt="Gaming website screenshot"><h3>Gaming Website</h3></div>
+                <div class="card performance" data-img="images/performance1.png"><img src="images/performance1.png" alt="Performance optimization result"><h3>Speed Optimization</h3></div>
+                <div class="card performance" data-img="images/performance2.png"><img src="images/performance2.png" alt="Performance optimization result"><h3>Speed Optimization</h3></div>
+            </div>
+        </div>
+    </section>
 
-<div class="projects">
-
-<div class="card international" onclick="openImage('images/interclient.png')">
-<img src="images/interclient.png">
-<h3>International Website</h3>
-</div>
-
-<div class="card international" onclick="openImage('images/interclint2.png')">
-<img src="images/interclint2.png">
-<h3>International Website</h3>
-</div>
-
-<div class="card ecom" onclick="openImage('images/Ecom1.png')">
-<img src="images/Ecom1.png">
-<h3>E-Commerce Website</h3>
-</div>
-
-<div class="card ecom" onclick="openImage('images/Ecom2.png')">
-<img src="images/Ecom2.png">
-<h3>E-Commerce Website</h3>
-</div>
-
-<div class="card gaming" onclick="openImage('images/gaming1.png')">
-<img src="images/gaming1.png">
-<h3>Gaming Website</h3>
-</div>
-
-<div class="card gaming" onclick="openImage('images/gaming2.png')">
-<img src="images/gaming2.png">
-<h3>Gaming Website</h3>
-</div>
-
-<div class="card performance" onclick="openImage('images/performance1.png')">
-<img src="images/performance1.png">
-<h3>Speed Optimization</h3>
-</div>
-
-<div class="card performance" onclick="openImage('images/performance2.png')">
-<img src="images/performance2.png">
-<h3>Speed Optimization</h3>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-    <!-- SERVICES PAGE CONTENT -->
     <section id="services" class="about-page">
-
-<div class="about-box">
-
-<div class="header-box">
-<h1>SEO Services</h1>
-
-<p>
-I provide complete SEO solutions including on-page SEO, off-page SEO, technical SEO, and advanced backlink strategies.
-My focus is to improve Google rankings using high-quality backlinks, content optimization, and technical improvements.
-</p>
-</div>
-
-<div class="tabs">
-<button class="tab-btn active" onclick="show('all', event)">All</button>
-<button class="tab-btn" onclick="show('backlinks', event)">Backlinks</button>
-<button class="tab-btn" onclick="show('creation', event)">Creation</button>
-<button class="tab-btn" onclick="show('submission', event)">Submission</button>
-</div>
-
-<div class="projects">
-
-<div class="card backlinks" onclick="openImage('images/profile-backlinks.png')">
-<img src="images/profile-backlinks.png">
-<h3>Profile Backlinks</h3>
-</div>
-
-<div class="card submission" onclick="openImage('images/Article backlinks.png')">
-<img src="images/Article backlinks.png">
-<h3>Article Submission</h3>
-</div>
-
-<div class="card creation" onclick="openImage('images/web 2.0.png')">
-<img src="images/web 2.0.png">
-<h3>Web 2.0 Creation</h3>
-</div>
-
-<div class="card submission" onclick="openImage('images/Directory submission.png')">
-<img src="images/Directory submission.png">
-<h3>Directory Submission</h3>
-</div>
-
-<div class="card backlinks" onclick="openImage('images/Guest posting.png')">
-<img src="images/Guest posting.png">
-<h3>Guest Posting</h3>
-</div>
-
-<div class="card submission" onclick="openImage('images/Image submission.png')">
-<img src="images/Image submission.png">
-<h3>Image Submission</h3>
-</div>
-
-<div class="card backlinks" onclick="openImage('images/Mix Backlinks.png')">
-<img src="images/Mix Backlinks.png">
-<h3>Mix Backlinks</h3>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-   <!-- CONTACT PAGE CONTENT -->
-<!-- CONTACT PAGE CONTENT -->
-<section id="contact" class="about-page">
-
-    <div class="about-box contact-wrapper">
-
-        <!-- LEFT SIDE -->
-        <div class="contact-left">
-
-            <h1>Contact Me</h1>
-
-            <p class="intro">
-                Feel free to contact me. 
-                I am always available for SEO projects, freelancing work, and collaborations.
-            </p>
-
-            <!-- ADDRESS -->
-            <div class="contact-card">
-                <img src="images/location.png" alt="Address">
-                <h3>Address</h3>
-                <p>Islamabad, Pakistan</p>
+        <div class="about-box">
+            <div class="header-box">
+                <h1>SEO Services</h1>
+                <p>I provide complete SEO solutions...</p>
             </div>
-
-            <!-- EMAIL -->
-            <div class="contact-card">
-                <img src="images/email.png" alt="Email">
-                <h3>Email</h3>
-                <p>
-                    <a href="mailto:aimalramzan6@gmail.com">
-                        aimalramzan6@gmail.com
-                    </a>
-                </p>
+            <div class="tabs">
+                <button class="tab-btn active" data-cat="all">All</button>
+                <button class="tab-btn" data-cat="backlinks">Backlinks</button>
+                <button class="tab-btn" data-cat="creation">Creation</button>
+                <button class="tab-btn" data-cat="submission">Submission</button>
             </div>
-
-            <!-- LINKEDIN -->
-            <div class="contact-card">
-                <img src="images/linkedin.png" alt="LinkedIn">
-                <h3>LinkedIn</h3>
-                <p>
-                    <a href="https://www.linkedin.com/in/aimal-ramzan-894a32304" target="_blank">
-                        Open Profile
-                    </a>
-                </p>
+            <div class="projects services-grid" id="servicesContainer">
+                <div class="card backlinks" data-img="images/profile-backlinks.png"><div class="img-box"><img src="images/profile-backlinks.png" alt="Profile backlinks service"><span class="plus">+</span></div><h3>Profile Backlinks</h3></div>
+                <div class="card submission" data-img="images/Article backlinks.png"><div class="img-box"><img src="images/Article backlinks.png" alt="Article submission service"><span class="plus">+</span></div><h3>Article Submission</h3></div>
+                <div class="card creation" data-img="images/web 2.0.png"><div class="img-box"><img src="images/web 2.0.png" alt="Web 2.0 creation service"><span class="plus">+</span></div><h3>Web 2.0 Creation</h3></div>
+                <div class="card submission" data-img="images/Directory submission.png"><div class="img-box"><img src="images/Directory submission.png" alt="Directory submission service"><span class="plus">+</span></div><h3>Directory Submission</h3></div>
+                <div class="card backlinks" data-img="images/Guest posting.png"><div class="img-box"><img src="images/Guest posting.png" alt="Guest posting service"><span class="plus">+</span></div><h3>Guest Posting</h3></div>
+                <div class="card submission" data-img="images/Image submission.png"><div class="img-box"><img src="images/Image submission.png" alt="Image submission service"><span class="plus">+</span></div><h3>Image Submission</h3></div>
+                <div class="card backlinks" data-img="images/Mix Backlinks.png"><div class="img-box"><img src="images/Mix Backlinks.png" alt="Mix backlinks service"><span class="plus">+</span></div><h3>Mix Backlinks</h3></div>
             </div>
-
-            <!-- FIVERR -->
-            <div class="contact-card">
-                <img src="images/fiverr.png" alt="Fiverr">
-                <h3>Fiverr</h3>
-                <p>
-                    <a href="https://www.fiverr.com/s/pdbzAV8" target="_blank">
-                        Open Profile
-                    </a>
-                </p>
-            </div>
-
         </div>
+    </section>
 
-        <!-- RIGHT FORM -->
-        <div class="contact-right">
-
-            <h2>Send Message</h2>
-
-            <form id="contact-form">
-
-                <input type="text" name="from_name" placeholder="Your Name" required>
-                <input type="email" name="from_email" placeholder="Your Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-
-                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-
-                <button type="submit">Send Message</button>
-
-            </form>
-
+    <section id="contact" class="about-page">
+        <div class="about-box contact-wrapper">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p class="intro">Feel free to contact me...</p>
+                <div class="contact-card"><img src="images/location.png" alt="Address icon"><h3>Address</h3><p>Islamabad, Pakistan</p></div>
+                <div class="contact-card"><img src="images/email.png" alt="Email icon"><h3>Email</h3><p><a href="mailto:aimalramzan6@gmail.com">aimalramzan6@gmail.com</a></p></div>
+                <div class="contact-card"><img src="images/linkedin.png" alt="LinkedIn icon"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/aimal-ramzan-894a32304" target="_blank" rel="noopener noreferrer">Open Profile</a></p></div>
+                <div class="contact-card"><img src="images/fiverr.png" alt="Fiverr icon"><h3>Fiverr</h3><p><a href="https://www.fiverr.com/s/pdbzAV8" target="_blank" rel="noopener noreferrer">Open Profile</a></p></div>
+            </div>
+            <div class="contact-right">
+                <h2>Send Message</h2>
+                <form id="contact-form">
+                    <input type="text" name="from_name" placeholder="Your Name" required>
+                    <input type="email" name="from_email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
+    </section>
+</div>
 
-    </div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="Enlarged view">
+</div>
 
-</section>
+<!-- WhatsApp Float -->
+<a href="https://wa.me/923157461790" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <img src="images/whatsap.png" alt="WhatsApp">
+</a>
 
-<!-- EMAILJS SDK (NEW VERSION) -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<!-- EMAIL SCRIPT -->
+<!-- Typing animation -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+    (function() {
+        const words = ["SEO Expert", "WordPress Expert", "Medical Imaging Technologist", "Content Writer", "Freelancer"];
+        let wordIndex = 0, charIndex = 0, deleting = false;
+        const typingElement = document.getElementById("heroTyping");
+        if (!typingElement) return;
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (!deleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentWord.length) {
+                    deleting = true;
+                    setTimeout(typeEffect, 1500);
+                    return;
+                }
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    deleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+            }
+            setTimeout(typeEffect, deleting ? 50 : 100);
+        }
+        typeEffect();
+    })();
+</script>
 
-    emailjs.init("2kZvvuM8trBJvWn-9");
-
-    const form = document.getElementById("contact-form");
-    const button = form.querySelector("button");
-
-    form.addEventListener("submit", function(e){
-        e.preventDefault();
-
-        button.disabled = true;
-        button.innerText = "Sending...";
-
-        emailjs.send("service_fajn8e7", "template_knyih9r", {
-            from_name: form.from_name.value,
-            from_email: form.from_email.value,
-            subject: form.subject.value,
-            message: form.message.value
-        })
-        .then(() => {
-            alert("✅ Message sent successfully!");
-            form.reset();
-        })
-        .catch((error) => {
-            console.log(error);
-            alert("❌ Message failed!");
-        })
-        .finally(() => {
-            button.disabled = false;
-            button.innerText = "Send Message";
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    function initTabs(containerId, btnSelector) {
+        const container = document.getElementById(containerId);
+        if(!container) return;
+        const btns = document.querySelectorAll(btnSelector);
+        const cards = container.querySelectorAll('.card');
+        function filter(category) {
+            cards.forEach(card => {
+                if(category === 'all') card.style.display = 'block';
+                else card.style.display = card.classList.contains(category) ? 'block' : 'none';
+            });
+        }
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filter(btn.getAttribute('data-cat'));
+            });
         });
+        filter('all');
+    }
 
+    function initLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        window.openImage = (src) => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = src;
+        };
+        window.closeImage = () => {
+            lightbox.style.display = 'none';
+        };
+        document.querySelectorAll('#projectsContainer .card, #servicesContainer .card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const imgSrc = card.getAttribute('data-img');
+                if(imgSrc) openImage(imgSrc);
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        initTabs('projectsContainer', '#projects .tab-btn');
+        initTabs('servicesContainer', '#services .tab-btn');
+        initLightbox();
+
+        emailjs.init("2kZvvuM8trBJvWn-9");
+        const form = document.getElementById("contact-form");
+        if(form) {
+            form.addEventListener("submit", function(e){
+                e.preventDefault();
+                const btn = form.querySelector("button");
+                btn.disabled = true;
+                btn.innerText = "Sending...";
+                emailjs.send("service_fajn8e7", "template_knyih9r", {
+                    from_name: form.from_name.value,
+                    from_email: form.from_email.value,
+                    subject: form.subject.value,
+                    message: form.message.value
+                })
+                .then(() => { alert("✅ Message sent successfully!"); form.reset(); })
+                .catch(() => alert("❌ Message failed!"))
+                .finally(() => { btn.disabled = false; btn.innerText = "Send Message"; });
+            });
+        }
     });
-
-});
 </script>
 </body>
 </html>

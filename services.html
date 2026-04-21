@@ -1,220 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEO Services</title>
-
-<link rel="stylesheet" href="css/style.css?v=3">
-
-<style>
-
-.img-box{
-position:relative;
-cursor:pointer;
-}
-
-/* default */
-.plus{
-position:absolute;
-top:10px;
-right:10px;
-background:rgba(255,255,255,0.9);
-color:#9ca3af;
-width:32px;
-height:32px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-font-weight:bold;
-transition:0.3s;
-}
-
-/* hover */
-.card:hover .plus{
-color:#22c55e;
-}
-
-/* CLICK FULL GREEN */
-.card:active .plus{
-background:#22c55e;
-color:white;
-transform:scale(1.1);
-}
-
-/* LIGHTBOX */
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:999;
-}
-
-.lightbox img{
-width:80%;
-max-width:900px;
-border-radius:10px;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:30px;
-font-size:40px;
-color:white;
-cursor:pointer;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Aimal Ramzan | SEO Services</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css?v=10">
 </head>
-
 <body>
 
 <div class="container">
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="images/Profilee.png" alt="Aimal Ramzan profile picture">
+            <h2>Aimal Ramzan</h2>
+        </div>
+        <nav class="menu">
+            <a href="index.html"><img src="images/home.png" alt=""> Home</a>
+            <a href="about.html"><img src="images/about.png" alt=""> About</a>
+            <a href="resume.html"><img src="images/resume.png" alt=""> Resume</a>
+            <a href="projects.html"><img src="images/projects.png" alt=""> Projects</a>
+            <a href="services.html"><img src="images/services.png" alt=""> Services</a>
+            <a href="contact.html"><img src="images/contact.png" alt=""> Contact</a>
+        </nav>
+    </aside>
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
-
-<div class="profile">
-<img src="images/profilee.png" alt="Profile">
-<h2>Aimal Ramzan</h2>
+    <section class="about-page">
+        <div class="about-box">
+            <div class="header-box">
+                <h1>SEO Services</h1>
+                <p>I provide complete SEO solutions including on-page SEO, off-page SEO, technical SEO, and advanced backlink strategies. My focus is to improve Google rankings using high-quality backlinks, content optimization, and technical improvements.</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" data-cat="all">All</button>
+                <button class="tab-btn" data-cat="backlinks">Backlinks</button>
+                <button class="tab-btn" data-cat="creation">Creation</button>
+                <button class="tab-btn" data-cat="submission">Submission</button>
+            </div>
+            <div class="projects services-grid" id="servicesContainer">
+                <div class="card backlinks" data-img="images/profile-backlinks.png"><div class="img-box"><img src="images/profile-backlinks.png" alt="Profile Backlinks"><span class="plus">+</span></div><h3>Profile Backlinks</h3></div>
+                <div class="card submission" data-img="images/Article backlinks.png"><div class="img-box"><img src="images/Article backlinks.png" alt="Article Submission"><span class="plus">+</span></div><h3>Article Submission</h3></div>
+                <div class="card creation" data-img="images/web 2.0.png"><div class="img-box"><img src="images/web 2.0.png" alt="Web 2.0 Creation"><span class="plus">+</span></div><h3>Web 2.0 Creation</h3></div>
+                <div class="card submission" data-img="images/Directory submission.png"><div class="img-box"><img src="images/Directory submission.png" alt="Directory Submission"><span class="plus">+</span></div><h3>Directory Submission</h3></div>
+                <div class="card backlinks" data-img="images/Guest posting.png"><div class="img-box"><img src="images/Guest posting.png" alt="Guest Posting"><span class="plus">+</span></div><h3>Guest Posting</h3></div>
+                <div class="card submission" data-img="images/Image submission.png"><div class="img-box"><img src="images/Image submission.png" alt="Image Submission"><span class="plus">+</span></div><h3>Image Submission</h3></div>
+                <div class="card backlinks" data-img="images/Mix Backlinks.png"><div class="img-box"><img src="images/Mix Backlinks.png" alt="Mix Backlinks"><span class="plus">+</span></div><h3>Mix Backlinks</h3></div>
+            </div>
+        </div>
+    </section>
 </div>
 
-<nav class="menu">
-
-<a href="index.html">
-<img src="images/home.png"> Home
-</a>
-
-<a href="about.html">
-<img src="images/about.png"> About
-</a>
-
-<a href="resume.html">
-<img src="images/resume.png"> Resume
-</a>
-
-<a href="projects.html">
-<img src="images/projects.png"> Projects
-</a>
-
-<a href="services.html">
-<img src="images/services.png"> Services
-</a>
-
-<a href="contact.html">
-<img src="images/contact.png"> Contact
-</a>
-
-</nav>
-
-</aside>
-
-<!-- MAIN CONTENT -->
-<section id="services" class="about-page">
-
-<div class="about-box">
-
-<div class="header-box">
-<h1>SEO Services</h1>
-
-<p>
-I provide complete SEO solutions including on-page SEO, off-page SEO, technical SEO, and advanced backlink strategies.
-My focus is to improve Google rankings using high-quality backlinks, content optimization, and technical improvements.
-</p>
-</div>
-
-<div class="projects">
-
-<div class="card" onclick="openImage('images/profile-backlinks.png')">
-<div class="img-box">
-<img src="images/profile-backlinks.png">
-<span class="plus">+</span>
-</div>
-<h3>Profile Backlinks</h3>
-</div>
-
-<div class="card" onclick="openImage('images/Article backlinks.png')">
-<div class="img-box">
-<img src="images/Article backlinks.png">
-<span class="plus">+</span>
-</div>
-<h3>Article Submission</h3>
-</div>
-
-<div class="card" onclick="openImage('images/web 2.0.png')">
-<div class="img-box">
-<img src="images/web 2.0.png">
-<span class="plus">+</span>
-</div>
-<h3>Web 2.0 Creation</h3>
-</div>
-
-<div class="card" onclick="openImage('images/Directory submission.png')">
-<div class="img-box">
-<img src="images/Directory submission.png">
-<span class="plus">+</span>
-</div>
-<h3>Directory Submission</h3>
-</div>
-
-<div class="card" onclick="openImage('images/Guest posting.png')">
-<div class="img-box">
-<img src="images/Guest posting.png">
-<span class="plus">+</span>
-</div>
-<h3>Guest Posting</h3>
-</div>
-
-<div class="card" onclick="openImage('images/Image submission.png')">
-<div class="img-box">
-<img src="images/Image submission.png">
-<span class="plus">+</span>
-</div>
-<h3>Image Submission</h3>
-</div>
-
-<div class="card" onclick="openImage('images/Mix Backlinks.png')">
-<div class="img-box">
-<img src="images/Mix Backlinks.png">
-<span class="plus">+</span>
-</div>
-<h3>Mix Backlinks</h3>
-</div>
-
-</div>
-
-</div>
-
-</main>
-
-</div>
-
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeImage()">
-<span class="close">&times;</span>
-<img id="lightbox-img">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="Enlarged view">
 </div>
+
+<a href="https://wa.me/923157461790" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <img src="images/whatsap.png" alt="WhatsApp">
+</a>
 
 <script>
-function openImage(src){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=src;
-}
+    const container = document.getElementById('servicesContainer');
+    const btns = document.querySelectorAll('.tab-btn');
+    const cards = container.querySelectorAll('.card');
 
-function closeImage(){
-document.getElementById("lightbox").style.display="none";
-}
+    function filterServices(category) {
+        cards.forEach(card => {
+            if(category === 'all') card.style.display = 'block';
+            else card.style.display = card.classList.contains(category) ? 'block' : 'none';
+        });
+    }
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterServices(btn.getAttribute('data-cat'));
+        });
+    });
+    filterServices('all');
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    window.openImage = (src) => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = src;
+    };
+    window.closeImage = () => {
+        lightbox.style.display = 'none';
+    };
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const imgSrc = card.getAttribute('data-img');
+            if(imgSrc) openImage(imgSrc);
+        });
+    });
 </script>
-
 </body>
 </html>

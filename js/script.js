@@ -10,37 +10,29 @@ let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typing = document.querySelector(".typing");
+function typeEffect() {
+    const typingElement = document.querySelector(".typing");
+    if (!typingElement) return;
 
-function loopTyping() {
-
-    const current = words[wordIndex];
-
+    const currentWord = words[wordIndex];
+    
     if (!deleting) {
-        typing.textContent = current.substring(0, charIndex + 1);
+        typingElement.textContent = currentWord.substring(0, charIndex + 1);
         charIndex++;
-
-        if (charIndex === current.length) {
+        if (charIndex === currentWord.length) {
             deleting = true;
-            setTimeout(loopTyping, 1200);
+            setTimeout(typeEffect, 1500);
             return;
         }
-
     } else {
-        typing.textContent = current.substring(0, charIndex - 1);
+        typingElement.textContent = currentWord.substring(0, charIndex - 1);
         charIndex--;
-
         if (charIndex === 0) {
             deleting = false;
-            wordIndex++;
-
-            if (wordIndex >= words.length) {
-                wordIndex = 0;
-            }
+            wordIndex = (wordIndex + 1) % words.length;
         }
     }
-
-    setTimeout(loopTyping, deleting ? 40 : 90);
+    setTimeout(typeEffect, deleting ? 50 : 100);
 }
 
-loopTyping();
+document.addEventListener("DOMContentLoaded", typeEffect);
